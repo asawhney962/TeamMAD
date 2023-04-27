@@ -1,0 +1,62 @@
+import csv
+import requests
+import json
+from datetime import datetime
+from tkinter import *
+
+# Set up the GUI
+root = Tk()
+root.title("Weather Station")
+
+# Set up data storage
+data = []
+
+# Function to collect data from sensor
+def collect_data():
+    temperature = 25 # replace with actual temperature sensor reading
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    data.append({'timestamp': timestamp, 'temperature': temperature})
+    print(f"Data collected: {timestamp} - {temperature}°C")
+
+# Function to send data to remote server
+def transmit_data():
+    url = "https://example.com/weatherstation/data"
+    headers = {'Content-Type': 'application/json'}
+    payload = json.dumps(data)
+    response = requests.post(url, headers=headers, data=payload)
+    if response.status_code == 200:
+        print("Data transmitted successfully")
+    else:
+        print(f"Error transmitting data: {response.status_code}")
+
+# Function to analyze data
+def analyze_data():
+    with open('data.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['timestamp', 'temperature'])
+        for d in data:
+            writer.writerow([d['timestamp'], d['temperature']])
+    print("Data saved to CSV file")
+
+# Function to update GUI
+def update_gui():
+    if len(data) > 0:
+        latest_data = data[-1]
+        timestamp = latest_data['timestamp']
+        temperature = latest_data['temperature']
+        label.config(text=f"Latest reading: {timestamp} - {temperature}°C")
+    root.after(5000, update_gui)
+
+# Set up GUI elements
+label = Label(root, text="No data yet")
+label.pack(pady=10)
+collect_button = Button(root, text="Collect Data", command=collect_data)
+collect_button.pack(pady=5)
+transmit_button = Button(root, text="Transmit Data", command=transmit_data)
+transmit_button.pack(pady=5)
+analyze_button = Button(root, text="Analyze Data", command=analyze_data)
+analyze_button.pack(pady=5)
+
+# Start the GUI and update loop
+update_gui()
+root.mainloop()
