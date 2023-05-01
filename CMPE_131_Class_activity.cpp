@@ -30,6 +30,8 @@ int main()
         else {
             cout << "The sentiment of the text is Neutral." << endl;
             count++;
+            //testing trigger jenkins
+           
         }
     }
     return 0;
