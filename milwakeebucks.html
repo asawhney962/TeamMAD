@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milwaukee Bucks</title>
+    <link rel="stylesheet" href="MLKB.css" />
+    <script src="app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"><i class="fas fa-gem"></i>MADS</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/tech.html" class="navbar__links">Community</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/sports.html" class="navbar__links">Sports</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/products.html" class="navbar__links">Products</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="/sign-up" class="button">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mainMLKB">
+        <div class="mainMLKB__container">
+          <div class="mainMLKB__content">
+            <h1>Milwaukee Bucks</h1>
+            <p>Fear the dear</p>
+            <button class="mainMLKB__btn"><a href="#">Get Started</a></button>
+          </div>
+          <div class="mainMLKB__img-container">
+            <img id="mainMLKB__img" src="images/image5.jpg" />
+          </div>
+          <div class="sidenav">
+            <a href="#game">Game</a>
+            <a href="#sch">Schedule</a>
+            <a href="#std">Standings</a>
+            <a href="#stats">Team Statistics</a>
+            <a href="#mem">Team Members</a>
+          </div>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+
+      <div class="servicesMLKB">
+        <h2 id="game"></h2>
+        <div class="servicesMLKB__container">
+          <div class="servicesMLKB__card">
+            <h2>Game</h2>
+          </div>
+          </div>
+        </div>
+
+            <div class="MLKB__schedule">
+              <h2 id="sch">2022-23</h2>
+              <div class="outer-wrapper">
+                <div class="table-wrapper">
+                <table id="emp-table">
+                    <thead>
+                        <th col-index = 1>Game
+                          <select class="table-filter" onchange="filter_rows()">
+                            <option value="all">All</option>
+                        </select>
+                        </th>
+                        <th col-index = 2>Date
+                            <select class="table-filter" onchange="filter_rows()">
+                                <option value="all">All</option>
+                            </select>
+                        </th>
+            
+                        <th col-index = 3>VS
+                            <select class="table-filter" onchange="filter_rows()">
+                                <option value="all">All</option>
+                            </select>
+                        </th>
+                        <th col-index = 4>Arena
+                          <select class="table-filter" onchange="filter_rows()">
+                              <option value="all">All</option>
+                          </select>
+                      </th>
+                        <th col-index = 5>Result
+                            <select class="table-filter" onchange="filter_rows()">
+                                <option value="all">All</option>
+                            </select>
+                        </th>
+                        <th col-index = 6>Score</th>
+                        
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Away</td>
+                            <td>Thur. Oct 20</td>
+                            <td>Philadelphia 76ers</td>
+                            <td>Wells Fargo Center</td>
+                            <td>Win</td>
+                            <td>88-90</td>
+                        </tr>
+                          <tr>
+                            <td>Home</td>
+                            <td>Sat. Oct 22</td>
+                            <td>Houston Rockets</td>
+                            <td>Fiserv Forum</td>
+                            <td>Win</td>
+                            <td>125-105</td>
+                        </tr>
+                          <tr>
+                            <td>Home</td>
+                            <td>Wed. Oct 26</td>
+                            <td>Brooklyn Nets</td>
+                            <td>Fiserv Forum</td>
+                            <td>Win</td>
+                            <td>110-99</td>
+                        </tr>
+                        <tr>
+                          <td>Home</td>
+                          <td>Fri. Oct 28</td>
+                          <td>New York Knicks</td>
+                          <td>Fiserv Forum</td>
+                          <td>Win</td>
+                          <td>119-108</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Sat. Oct 29</td>
+                        <td>Atlanta Hawks</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>123-115</td>
+                    </tr>
+                    <tr>
+                      <td>Home</td>
+                      <td>Mon. Oct 31</td>
+                      <td>Detroit Pistons</td>
+                      <td>Fiserv Forum</td>
+                      <td>Win</td>
+                      <td>110-108</td>
+                  </tr>
+                        <tr>
+                          <td>Home</td>
+                          <td>Wed. Nov 2</td>
+                          <td>Detroit Pistons</td>
+                          <td>Fiserv Forum</td>
+                          <td>Win</td>
+                          <td>116-91</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Fri. Nov 4</td>
+                        <td>Minnesota Timberwolves</td>
+                        <td>Target Center</td>
+                        <td>Win</td>
+                        <td>102-115</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Sat. Nov 5</td>
+                        <td>Oklahoma City Thunder</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>108-94</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Sat. Nov 7</td>
+                        <td>Atlanta Hawks</td>
+                        <td>State Farm Arena</td>
+                        <td>Lose</td>
+                        <td>117-98</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Wed, Nov 9</td>
+                        <td>Oklahoma City Thunder</td>
+                        <td>Paycom Center</td>
+                        <td>Win</td>
+                        <td>132-136</td>
+                      </tr>
+                        <td>Home</td>
+                        <td>Mon. Nov 14</td>
+                        <td>Atlanta Hawks</td>
+                        <td>Fiserv Forum</td>
+                        <td>Lose</td>
+                        <td>106-121</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Wed. Nov 16</td>
+                        <td>Cleveland Cavaliers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>113-98</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Fri. Nov 18</td>
+                        <td>Philadelphia 76ers</td>
+                        <td>Wells Fargo Center</td>
+                        <td>Lose</td>
+                        <td>110-102</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Mon. Nov 21</td>
+                        <td>Portland Trail Blazers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>119-111</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Wed. Nov 23</td>
+                        <td>Chicago Bulls</td>
+                        <td>Fiserv Forum</td>
+                        <td>Lose</td>
+                        <td>113-118</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Fri. Nov 25</td>
+                        <td>Cleveland Cavaliers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>117-102</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Sun. Nov 27</td>
+                        <td>Dallas Mavericks</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>124-115</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Wed. Nov 30</td>
+                        <td>New York Knicks</td>
+                        <td>Madison Square Garden</td>
+                        <td>Win</td>
+                        <td>103-109</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Fri. Dec 2</td>
+                        <td>Los Angeles Lakers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Lose</td>
+                        <td>129-133</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Sat. Dec 3</td>
+                        <td>Charlotte Hornets</td>
+                        <td>Spectrum Center</td>
+                        <td>Win</td>
+                        <td>96-105</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Mon. Dec 5</td>
+                        <td>Orlando Magic</td>
+                        <td>Amway Center</td>
+                        <td>Win</td>
+                        <td>102-109</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Wed. Dec 7</td>
+                        <td>Sacramento Kings</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>126-113</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Fri. Dec 9</td>
+                        <td>Dallas Mavericks</td>
+                        <td>American Airlines Center</td>
+                        <td>Win</td>
+                        <td>105-106</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Sun. Dec 11</td>
+                        <td>Houston Rockets</td>
+                        <td>Toyota Center</td>
+                        <td>Lose</td>
+                        <td>97-92</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Tue. Dec 13</td>
+                        <td>Golden State Warriors</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>128-111</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Thu. Dec 15</td>
+                        <td>Memphis Grizzlies</td>
+                        <td>Fedexforum</td>
+                        <td>Lose</td>
+                        <td>142-101</td>
+                      </tr>
+                        <td>Home</td>
+                        <td>Sat. Dec 17</td>
+                        <td>Utah Jazz</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>123-97</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Mon. Dec 19</td>
+                        <td>New Orleans Pelicans</td>
+                        <td>Smoothie King Center</td>
+                        <td>Win</td>
+                        <td>119-129</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Wed. Dec 21</td>
+                        <td>Cleveland Cavaliers</td>
+                        <td>Rocket Mortgage Fieldhouse</td>
+                        <td>Lose</td>
+                        <td>114-106</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Fri. Dec 23</td>
+                        <td>Brooklyn Nets</td>
+                        <td>Barclays Center</td>
+                        <td>Lose</td>
+                        <td>118-100</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Sun. Dec 25</td>
+                        <td>Boston Celtics</td>
+                        <td>TD Garden</td>
+                        <td>Lose</td>
+                        <td>139-118</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Wed. Dec 28</td>
+                        <td>Chicago Bulls</td>
+                        <td>United Center</td>
+                        <td>Lose</td>
+                        <td>119-113</td>
+                      </tr>
+                        <td>Home</td>
+                        <td>Fri. Dec 30</td>
+                        <td>Minnesota Timberwolves</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>123-114</td>
+                      </tr>
+                        <td>Home</td>
+                        <td>Sun. Jan 1</td>
+                        <td>Washington Wizards</td>
+                        <td>Fiserv Forum</td>
+                        <td>Lose</td>
+                        <td>95-118</td>
+                      </tr>
+                        <td>Home</td>
+                        <td>Tue. Jan 3</td>
+                        <td>Washington Wizards</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>123-113</td>
+                      </tr>
+                        <td>Away</td>
+                        <td>Wed. Jan 4</td>
+                        <td>Toronto Raptors</td>
+                        <td>Scotiabank Arena</td>
+                        <td>Win</td>
+                        <td>101-104</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Fri. Jan 6</td>
+                        <td>Charlotte Hornets</td>
+                        <td>Fiserv Forum</td>
+                        <td>Lose</td>
+                        <td>113-98</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Mon. Jan 9</td>
+                        <td>New York Knicks</td>
+                        <td>Madison Square Garden</td>
+                        <td>Win</td>
+                        <td>107-111</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Wed. Jan 11</td>
+                        <td>Atlanta Hawks</td>
+                        <td>State Farm Arena</td>
+                        <td>Win</td>
+                        <td>105-114</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Thu. Jan 12</td>
+                        <td>Miami Heat</td>
+                        <td>FTX Arena</td>
+                        <td>Lose</td>
+                        <td>108-102</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Sat. Jan 14</td>
+                        <td>Miami Heat</td>
+                        <td>Miami-Dade Arena</td>
+                        <td>Lose</td>
+                        <td>111-95</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Mon. Jan 16</td>
+                        <td>Indiana Pacers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>132-119</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Tue. Jan 17</td>
+                        <td>Toronto Raptors</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>130-122</td>
+                      </tr>
+            
+                      <tr>
+                        <td>Away</td>
+                        <td>Sat. Jan 21</td>
+                        <td>Cleveland Cavaliers</td>
+                        <td>Rocket Mortgage Fieldhouse</td>
+                        <td>Lose</td>
+                        <td>114-102</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Mon. Jan 23</td>
+                        <td>Detroit Pistons</td>
+                        <td>Little Caesars Arena</td>
+                        <td>Win</td>
+                        <td>130-150</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Wed. Jan 25</td>
+                        <td>Denver Nuggets</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>107-99</td>
+                      </tr>
+                      <tr>
+                        <td>Away</td>
+                        <td>Fri. Jan 27</td>
+                        <td>Indiana Pacers</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>131-141</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Sun. Jan 29</td>
+                        <td>New Orleans Pelicans</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>135-110</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Tue. Jan 31</td>
+                        <td>Charlotte Hornets</td>
+                        <td>Fiserv Forum</td>
+                        <td>Win</td>
+                        <td>124-115</td>
+                      </tr> 
+                    </tbody>
+                </table>
+                <script>
+                    window.onload = () => {
+                        console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(1)").innerHTML);
+                    };
+            
+                    getUniqueValuesFromColumn()
+                    
+                </script>
+
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="MLKB__standing">
+        <h2 id="std">Standings for 2022-23</h2>
+        <p>Eastern Conference</p>
+        <button type="button" class="collapsible">Legend</button>
+            <div class="content">
+              <p>W=Wins  L=Losses  Win%=Winning percentage  GB=Games behind  Conf=Conference
+                Div=Division  Home=Win/Lose in Home Games  Road=Win/Lose in Away Games
+                OT=Overtime Records Win/Lose Last10=Team record in the last 10 games played in basketball (Win/Loss)
+                Streak=Streaks of wins or losses.
+              </p>
+            </div>
+              <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+                
+                for (i = 0; i < coll.length; i++) {
+                  coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                      content.style.display = "none";
+                    } else {
+                      content.style.display = "block";
+                    }
+                  });
+                }
+              </script>
+              <div class="outer-wrapper">
+                <div class="table-wrapper">
+                <table id="emp-table">
+                    <thead>
+                        <th>Team</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>Win%</th>
+                        <th>GB</th>
+                        <th>Conf</th>  
+                        <th>Div</th>
+                        <th>Home</th>
+                        <th>Road</th>
+                        <th>OT</th>
+                        <th>Last10</th>
+                        <th>Streak</th>  
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.Milwakee Bucks</td>
+                            <td>58</td>
+                            <td>24</td>
+                            <td>.707</td>
+                            <td>--</td>
+                            <td>35-17</td>
+                            <td>11-5</td>
+                            <td>32-9</td>
+                            <td>26-15</td>
+                            <td>3-2</td>
+                            <td>6-4</td>
+                            <td>L 2</td>
+                        </tr>
+                        <tr>
+                            <td>2.Boston Celtics</td>
+                            <td>57</td>
+                            <td>24</td>
+                            <td>.695</td>
+                            <td>1</td>
+                            <td>34-18</td>
+                            <td>11-5</td>
+                            <td>32-9</td>
+                            <td>25-16</td>
+                            <td>4-7</td>
+                            <td>8-2</td>
+                            <td>W 3</td>
+                        </tr>
+                        <tr>
+                            <td>3.Philadelphia 76ers</td>
+                            <td>54</td>
+                            <td>28</td>
+                            <td>.659</td>
+                            <td>4</td>
+                            <td>34-18</td>
+                            <td>10-6</td>
+                            <td>29-12</td>
+                            <td>25-16</td>
+                            <td>4-2</td>
+                            <td>5-5</td>
+                            <td>W 2</td>
+                        </tr>
+                        <tr>
+                            <td>4.Cleveland Cavaliers</td>
+                            <td>51</td>
+                            <td>31</td>
+                            <td>.622</td>
+                            <td>7</td>
+                            <td>34-18</td>
+                            <td>13-3</td>
+                            <td>31-10</td>
+                            <td>20-21</td>
+                            <td>7-0</td>
+                            <td>7-3</td>
+                            <td>L 2</td>
+                        </tr>
+                        <tr>
+                            <td>5.New York Knicks</td>
+                            <td>47</td>
+                            <td>35</td>
+                            <td>.573</td>
+                            <td>11</td>
+                            <td>32-20</td>
+                            <td>8-8</td>
+                            <td>23-18</td>
+                            <td>24-17</td>
+                            <td>4-6</td>
+                            <td>5-5</td>
+                            <td>L 2</td>
+                        </tr>
+                        <tr>
+                            <td>6.Brooklyn Nets</td>
+                            <td>45</td>
+                            <td>37</td>
+                            <td>.549</td>
+                            <td>13</td>
+                            <td>30-22</td>
+                            <td>7-9</td>
+                            <td>23-18</td>
+                            <td>22-19</td>
+                            <td>1-1</td>
+                            <td>6-4</td>
+                            <td>L 1</td>
+                        </tr>
+                        <tr>
+                            <td>7.Atlantic Hawks</td>
+                            <td>41</td>
+                            <td>41</td>
+                            <td>.500</td>
+                            <td>17</td>
+                            <td>26-26</td>
+                            <td>8-8</td>
+                            <td>24-17</td>
+                            <td>17-24</td>
+                            <td>4-2</td>
+                            <td>5-5</td>
+                            <td>L 2</td>
+                        </tr>
+                        <tr>
+                            <td>8. Miami Heats</td>
+                            <td>44</td>
+                            <td>38</td>
+                            <td>.537</td>
+                            <td>14</td>
+                            <td>24-28</td>
+                            <td>10-6</td>
+                            <td>27-14</td>
+                            <td>17-24</td>
+                            <td>3-2</td>
+                            <td>6-4</td>
+                            <td>W 1</td>
+                        </tr>
+                        <tr>
+                            <td>9.Toronto Raptors</td>
+                            <td>41</td>
+                            <td>41</td>
+                            <td>.500</td>
+                            <td>17</td>
+                            <td>26-26</td>
+                            <td>4-12</td>
+                            <td>27-14</td>
+                            <td>14-27</td>
+                            <td>2-3</td>
+                            <td>6-4</td>
+                            <td>W 1</td>
+                        </tr>
+                        <tr>
+                            <td>10.Chicago Bulls</td>
+                            <td>40</td>
+                            <td>42</td>
+                            <td>.488</td>
+                            <td>18</td>
+                            <td>27-25</td>
+                            <td>7-9</td>
+                            <td>22-19</td>
+                            <td>18-23</td>
+                            <td>3-4</td>
+                            <td>6-4</td>
+                            <td>W 2</td>
+                        </tr>
+                        <tr>
+                            <td>11.IndianaPacers</td>
+                            <td>35</td>
+                            <td>47</td>
+                            <td>.427</td>
+                            <td>23</td>
+                            <td>24-28</td>
+                            <td>7-9</td>
+                            <td>20-21</td>
+                            <td>15-26</td>
+                            <td>1-2</td>
+                            <td>3-7</td>
+                            <td>W 1</td>
+                        </tr>
+                        <tr>
+                            <td>12.Washington Wizards</td>
+                            <td>35</td>
+                            <td>47</td>
+                            <td>.427</td>
+                            <td>23</td>
+                            <td>21-31</td>
+                            <td>8-8</td>
+                            <td>19-22</td>
+                            <td>16-25</td>
+                            <td>1-2</td>
+                            <td>3-7</td>
+                            <td>L 1</td>
+                        </tr>
+                        <tr>
+                            <td>13.Orlando Magic</td>
+                            <td>34</td>
+                            <td>48</td>
+                            <td>.415</td>
+                            <td>24</td>
+                            <td>20-32</td>
+                            <td>7-9</td>
+                            <td>20-21</td>
+                            <td>14-27</td>
+                            <td>2-2</td>
+                            <td>5-5</td>
+                            <td>L 4</td>
+                        </tr>
+                        <tr>
+                            <td>14.Charlotte Hornets</td>
+                            <td>27</td>
+                            <td>55</td>
+                            <td>.329</td>
+                            <td>31</td>
+                            <td>15-37</td>
+                            <td>7-9</td>
+                            <td>13-28</td>
+                            <td>14-27</td>
+                            <td>1-4</td>
+                            <td>5-5</td>
+                            <td>W 1</td>
+                        </tr>
+                        <tr>
+                            <td>15.Detroit Pistons</td>
+                            <td>17</td>
+                            <td>65</td>
+                            <td>.207</td>
+                            <td>41</td>
+                            <td>8-44</td>
+                            <td>2-14</td>
+                            <td>9-32</td>
+                            <td>8-33</td>
+                            <td>3-1</td>
+                            <td>1-9</td>
+                            <td>L 1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
+    </div>
+    <div class="statistic">
+      <h id="stats">Team Statistics</h>
+        <button type="button" class="collapsible">Legend</button>
+        <div class="content">
+          <p>*GP=Games Played  *MIN=Minutes Played  *PTS=Points  *W=Wins  *L=Losses  
+            *WIN%=Win Percentage  *FGM=Field Goals Made  *FGA=Field Goals Attempted  *FG%=Field Goal Percentage  
+            *3PM=3 Point Field Goals Made  *3PA=3 Point Field Goals Attempted  *3P%=3 Point Field Goal Percentage 
+            *FTM=Free Throws Made  *FTA=Free Throws Attempted  *FT%=Free Throw Percentage  *OREB=Offensive Rebounds  
+            *DREB=Defensive Rebounds  *REB=Rebounds  *AST=Assists  *TOV=Turnovers  *STL=Steals  *BLK=Blocks  *PF=Personal Fouls
+            +/-=Plus-Minus
+          </p>
+        </div>
+
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+
+    <div class="outer-wrapper">
+        <div class="table-wrapper">
+        <table id="emp-table">
+          <thead>
+            <th>Overall</th>
+            <th>GP</th>
+            <th>MIN</th>
+            <th>PTS</th>
+            <th>W</th>
+            <th>L</th>  
+            <th>WIN%</th>
+            <th>FGM</th>
+            <th>FGA</th>
+            <th>FG%</th>
+            <th>3PM</th>
+            <th>3PA</th>  
+            <th>3P%</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022-23</td>
+            <td>5</td>
+            <td>49.0</td>
+            <td>118.8</td>
+            <td>1</td>
+            <td>4</td>
+            <td>.200</td>
+            <td>44.0</td>
+            <td>92.6</td>
+            <td>47.5</td>
+            <td>15.6</td>
+            <td>41.2</td>
+            <td>37.9</td>
+          </tr>
+        </tbody>
+        <thead>
+          <th>FTM</th>
+          <th>FTA</th>
+          <th>FT%</th>
+          <th>OREB</th>
+          <th>DREB</th>  
+          <th>REB</th>
+          <th>AST</th>
+          <th>TOV</th>
+          <th>STL</th>
+          <th>BLK</th>
+          <th>PF</th>
+          <th>+/-</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>15.2</td>
+                <td>21.4</td>
+                <td>71.0</td>
+                <td>10.2</td>
+                <td>34.2</td>
+                <td>44.4</td>
+                <td>26.8</td>
+                <td>14.4</td>
+                <td>6.6</td>
+                <td>3.6</td>
+                <td>18.8</td>
+                <td>-5.2</td>
+            </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+    <div class="teammem">
+      <h1 id="mem"></h1>
+      <div class="service__container">
+        <div class="service__card  ">
+            <h2>[0] MarJon Beauchamp</h2>
+            <p>Forward</p>
+        </div>
+        <div class="service__card">
+            <h2>[3] Meyers Leonard</h2>
+            <p>Forward-Center</p>
+        </div>
+        <div class="service__card">
+            <h2>[5] Jevon Carter</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[7] Joe Ingles</h2>
+            <p>Forward-Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[9] Bobby Portis</h2>
+            <p>Forward</p>
+        </div>
+        <div class="service__card">
+            <h2>[11] Brook Lopez</h2>
+            <p>Center</p>
+        </div>
+        <div class="service__card">
+            <h2>[12] Grayson Allen</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[20] AJ Green</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[21] Jrue Holiday</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[22] Khris Middleton</h2>
+            <p>Forward</p>
+        </div>
+        <div class="service__card">
+            <h2>[23] Wesley Matthes</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[24] Pat Connaughton</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[28] Lindaell Wigginton</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[31] Goran Dragic</h2>
+            <p>Guard</p>
+        </div>
+        <div class="service__card">
+            <h2>[34] Giannis Antetokounmpo</h2>
+            <p>Forward</p>
+        </div>
+        <div class="service__card">
+            <h2>[43] Thanasis Antetokounmpo</h2>
+            <p>Forward</p>
+        </div>
+        <div class="service__card">
+            <h2>[99] Jae Crowder</h2>
+            <p>Forward</p>
+        </div>
+      </div>
+    </div>
+  
+  
+  <script src="app.js"></script>
+  </body>
+    
+</html>
